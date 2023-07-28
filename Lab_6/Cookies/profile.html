@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="images/1.jpg" alt="">
+    </div>
+
+
+    <script src="cookies_library.js"></script>
+    <script>
+        let name = getCookie('name');
+        let age = getCookie('age');
+        let gender = getCookie('gender');
+        let color = getCookie('color');
+
+        
+        if(hasCookie('visits'))
+            setCookie('visits', Number(getCookie('visits')) + 1, newDate);
+        else
+            setCookie('visits', 1, newDate);
+
+        let visits = getCookie('visits');
+        
+        const messageParagraph = document.createElement('p');
+        messageParagraph.innerHTML = `<p>Welcome <span style="color: ${color}">${name}</span>, you have visited this site <span style="color: ${color}">${visits}</span> times :)</p>`;
+
+
+        document.querySelector('.container').appendChild(messageParagraph);
+
+    </script>
+</body>
+</html>

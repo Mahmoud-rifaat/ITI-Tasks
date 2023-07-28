@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="text-fields">
+            <div class="input">
+                <p>Enter your name:</p>
+                <input type="text" id="name-field">
+            </div>
+            <div class="input">
+                <p>Enter your age:</p>
+                <input type="text" id="age-field">
+            </div>
+            <div class="input">
+                <p>Select your gender</p>
+                <input type="radio" value="male" name="gender">
+                <label for="male"><img src="images/1.jpg" alt=""></label>
+                <input type="radio" value="female" name="gender">
+                <label for="female"><img src="images/2.jpg" alt=""></label>
+            </div>
+            <div class="input">
+                <span>Select your favorite color</span>
+                <select name="color" id="color">
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                </select>
+            </div>
+
+
+
+
+            <input type="button" value="register" id="register">
+        </div>
+    </div>
+
+    <script src="cookies_library.js"></script>
+    <script>
+        document.querySelector('#register').addEventListener('click', function(){
+
+            let name = document.querySelector('#name-field').value;
+            let age = document.querySelector('#age-field').value;
+            let gender;
+            document.getElementsByName('gender').forEach(
+                function(radio){
+                    if(radio.checked) gender = radio.value;
+                }
+            );
+            let color = document.querySelector('#color').value;
+
+            setCookie('name', name, newDate);
+            setCookie('age', age, newDate);
+            setCookie('gender', gender, newDate);
+            setCookie('color', color, newDate);
+
+            console.log(name,age,gender, color);
+
+            location.replace('/Cookies/profile.html');
+        });
+    </script>
+</body>
+</html>

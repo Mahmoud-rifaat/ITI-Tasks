@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#get-users{
+    background-color: aquamarine;
+    padding: 5px;
+    margin: 10px;
+}
+
+table{
+    margin: 10px auto;
+    border: 1px solid black;
+}
+
+table *{
+    border: 1px solid black;
+}
+
+thead{
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    background-color: bisque;
+}
+
+tbody{
+    text-align: center;
+}
