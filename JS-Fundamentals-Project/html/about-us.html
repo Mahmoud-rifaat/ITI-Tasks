@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Toastr CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+    />
+    <!-- Font Awesome CSS-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/about-us.css" />
+
+    <!-- JQuery for Toastr -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Toastr JS -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js
+      "
+    ></script>
+    <script src="../js/auth.js"></script>
+    <script defer src="../js/main-nav.js"></script>
+    <script defer src="../js/footer.js"></script>
+    <script defer src="../js/about-us.js"></script>
+
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <!-- Main navigation -->
+    <nav class="main-nav sticky">
+      <ul>
+        <li>
+          <a href="#">✨How its Built</a>
+        </li>
+        <li>
+          <a href="home.html">Home</a>
+        </li>
+        <li>
+          <a href="about-us.html">About Us</a>
+        </li>
+        <li>
+          <a href="contact-us.html">Contact Us</a>
+        </li>
+        <li>
+          <a href="#" onclick="logout()">Logout</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="about-us-container">
+      <section class="about-us">
+        <div class="about">
+          <img src="../img/street-store.jpg" class="pic" />
+          <div class="text">
+            <h2>About Us</h2>
+            <h5>Fullstack Development & <span>Deployment</span></h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+              necessitatibus quam dignissimos reprehenderit eligendi molestiae
+              ipsam officia harum tenetur quibusdam asperiores voluptatem iste,
+              maiores culpa ut aliquid, deleniti accusamus in optio assumenda
+              sit nam possimus tempore sed. Rem tempora sequi, architecto velit,
+              officia amet tenetur animi voluptatem impedit unde at?
+            </p>
+            <div class="data">
+              <a href="#" class="btn">Hire Me</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>Mahmoud Refaat &copy; 2023</p>
+      <div class="social-media">
+        <a href="https://www.facebook.com"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://www.google.com"><i class="fa-brands fa-google"></i></a>
+        <a href="https://www.twitter.com"
+          ><i class="fa-brands fa-x-twitter"></i
+        ></a>
+        <a href="https://www.linkedin.com"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </div>
+      <button class="btn go-to-top" onclick="goToTop()">&uarr;</button>
+    </footer>
+  </body>
+</html>

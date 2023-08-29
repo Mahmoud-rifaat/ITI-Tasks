@@ -1,0 +1,17 @@
+.login-form {
+  width: 50%;
+  height: 25vh;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  display: block;
+  margin: auto;
+  padding: 0.3rem;
+  font-size: 1.5rem;
+}

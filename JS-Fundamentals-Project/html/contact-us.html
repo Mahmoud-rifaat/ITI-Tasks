@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Toastr CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+    />
+    <!-- Font Awesome CSS-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/contact-us.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+
+    <!-- JQuery for Toastr -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Toastr JS -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js
+      "
+    ></script>
+    <script src="../js/auth.js"></script>
+    <script defer src="../js/main-nav.js"></script>
+    <script defer src="../js/footer.js"></script>
+    <script defer src="../js/contact-us.js"></script>
+
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <!-- Main navigation -->
+    <nav class="main-nav sticky">
+      <ul>
+        <li>
+          <a href="#">✨How its Built</a>
+        </li>
+        <li>
+          <a href="home.html">Home</a>
+        </li>
+        <li>
+          <a href="about-us.html">About Us</a>
+        </li>
+        <li>
+          <a href="contact-us.html">Contact Us</a>
+        </li>
+        <li>
+          <a href="#" onclick="logout()">Logout</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Form Body -->
+    <form class="form-container" onsubmit="submitFun(event)">
+      <div class="heading-container">
+        <h1 class="heading-text">Contact us</h1>
+      </div>
+      <div class="inputs-container">
+        <div class="input name-container">
+          <label for="name-field">Name</label>
+          <input type="text" id="name-field" required />
+        </div>
+        <p id="name-alert">Name is required & should be a number</p>
+        <div class="input email-container">
+          <label for="email-field">Email</label>
+          <input type="email" id="email-field" required />
+        </div>
+        <p id="email-alert">Email is not valid</p>
+        <div class="input password-container">
+          <label for="password-field">Password</label>
+          <input type="password" id="password-field" minlength="8" required />
+        </div>
+        <p id="password-alert">Password must be 8 chars at least</p>
+        <div class="input gender-container">
+          <label for="gender">Gender</label>
+          <div class="gender-choices">
+            <input
+              type="radio"
+              name="gender"
+              id="male-radio"
+              value="male"
+              required
+            />
+            <label for="male-radio">male</label>
+            <input
+              type="radio"
+              name="gender"
+              id="female-radio"
+              value="female"
+              required
+            />
+            <label for="female-radio">female</label>
+          </div>
+        </div>
+        <p id="gender-alert">Please select your gender</p>
+        <!-- <div class="input sports-container">
+          <label for="sport">Sports</label>
+          <div class="sport-choices">
+            <input
+              type="checkbox"
+              name="sport"
+              id="tennis-check"
+              value="tennis"
+            />
+            <label for="tennis-check">Tennis</label>
+            <input
+              type="checkbox"
+              name="sport"
+              id="running-check"
+              value="running"
+            />
+            <label for="running-check">Running</label>
+            <input
+              type="checkbox"
+              name="sport"
+              id="football-check"
+              value="football"
+            />
+            <label for="football-check">Football</label>
+          </div>
+        </div>
+        <p id="sport-alert">Please select at least two sports</p> -->
+        <div class="input country-container">
+          <label for="country-field">Country</label>
+          <select name="country-field" id="country-dropdown" required>
+            <option value="default">--Please choose a country--</option>
+            <option value="egypt">Egypt</option>
+            <option value="usa">USA</option>
+            <option value="spain">Spain</option>
+            <option value="england">England</option>
+            <option value="russia">Russia</option>
+          </select>
+        </div>
+        <p id="country-alert">Please select your country</p>
+        <div class="input buttons-container">
+          <input class="btn submit-btn" type="submit" value="Submit" />
+          <input class="btn reset-btn" type="reset" value="Reset" />
+        </div>
+      </div>
+    </form>
+
+    <!-- Footer -->
+    <footer>
+      <p>Mahmoud Refaat &copy; 2023</p>
+      <div class="social-media">
+        <a href="https://www.facebook.com"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://www.google.com"><i class="fa-brands fa-google"></i></a>
+        <a href="https://www.twitter.com"
+          ><i class="fa-brands fa-x-twitter"></i
+        ></a>
+        <a href="https://www.linkedin.com"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </div>
+      <button class="btn go-to-top" onclick="goToTop()">&uarr;</button>
+    </footer>
+  </body>
+</html>

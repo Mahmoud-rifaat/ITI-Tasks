@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Toastr CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+    />
+    <!-- Font Awesome CSS-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/home.css" />
+
+    <!-- JQuery for Toastr -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Toastr JS -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js
+      "
+    ></script>
+    <!-- JS -->
+    <script src="../js/auth.js"></script>
+    <script defer src="../js/main-nav.js"></script>
+    <script defer src="../js/data.js"></script>
+    <script defer src="../js/products.js"></script>
+    <script defer src="../js/sidebar.js"></script>
+    <script defer src="../js/slider.js"></script>
+    <script defer src="../js/business-nav.js"></script>
+    <script defer src="../js/footer.js"></script>
+
+    <title>Home</title>
+  </head>
+  <body>
+    <!-- Cart Modal -->
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h3>Cart</h3>
+
+      <p class="cart-total-sum">
+        Total <span class="cart-total-sum__text">$000</span>
+      </p>
+      <button class="btn checkout-btn" onclick="checkOut()">Check Out</button>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <!-- Main navigation -->
+    <nav class="main-nav sticky">
+      <ul>
+        <li>
+          <a href="#">✨How its Built</a>
+        </li>
+        <li>
+          <a href="home.html">Home</a>
+        </li>
+        <li>
+          <a href="about-us.html">About Us</a>
+        </li>
+        <li>
+          <a href="contact-us.html">Contact Us</a>
+        </li>
+        <li>
+          <a href="#" onclick="logout()">Logout</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="wrapper">
+      <!-- Business Nav & Search -->
+      <div class="business-nav">
+        <div class="logo"><img src="/img/logo.png" alt="" /></div>
+        <div class="categories-btn">Categories v</div>
+        <div class="search-bar">
+          <input type="text" placeholder="Enter the name of the product" />
+        </div>
+        <div class="show-favorites-btn">
+          <i class="fa-solid fa-heart business-nav__icon"></i>
+        </div>
+        <div class="show-cart-btn">
+          <i class="fa-solid fa-cart-shopping business-nav__icon"></i>
+        </div>
+      </div>
+
+      <!-- Slider -->
+      <section class="slider">
+        <!-- <div class="slide slider-dialogue">
+          <h1>Trending Item</h1>
+          <p>Get Now!</p>
+          <a href="#" class="btn">Add to cart</a>
+        </div> -->
+        <div class="slide">
+          <img src="/img/slider-images/white-sneakers.jpg" />
+        </div>
+        <div class="slide">
+          <img src="/img/slider-images/makeup.jpg" />
+        </div>
+        <div class="slide">
+          <img src="/img/slider-images/headset.jpg" />
+        </div>
+        <div class="slide">
+          <img src="/img/slider-images/red-sneakers.jpg" />
+        </div>
+
+        <button class="slider__btn slider__btn--left">&larr;</button>
+        <button class="slider__btn slider__btn--right">&rarr;</button>
+        <div class="dots"></div>
+      </section>
+
+      <!-- Content Wrapper -->
+      <div class="content-wrapper">
+        <!-- Side Bar -->
+        <aside class="side-bar">
+          <section class="side-bar__categories-filters">
+            <p>Category</p>
+          </section>
+          <section class="side-bar__price-filter">
+            <p>Minimum Price</p>
+            <p class="side-bar__price-filter__min-price">$0</p>
+            <label for="side-bar__price-filter__price-range">
+              $0<input
+                type="range"
+                class="side-bar__price-filter__price-range"
+                min="0"
+                max="1000"
+                value="0"
+              />$1000
+            </label>
+          </section>
+          <section class="rating">Rating</section>
+        </aside>
+
+        <!-- Products Container-->
+        <section class="products-container"></section>
+
+        <!-- Info section -->
+        <section class="info">
+          <img src="../img/pic1.jpg" alt="" />
+          <div>
+            <h2>All you need in one place</h2>
+            <p>Enjoy shopping on our site easily and flawlessly</p>
+            <a href="about-us.html" class="btn">Learn More</a>
+          </div>
+        </section>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <p>Mahmoud Refaat &copy; 2023</p>
+        <div class="social-media">
+          <a href="https://www.facebook.com"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://www.google.com"
+            ><i class="fa-brands fa-google"></i
+          ></a>
+          <a href="https://www.twitter.com"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+          <a href="https://www.linkedin.com"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </div>
+        <!-- <a href="#" class="go-to-top">&uarr;</a> -->
+        <button class="btn go-to-top" onclick="goToTop()">&uarr;</button>
+      </footer>
+    </div>
+    <!-- Wrapper Ends  -->
+  </body>
+</html>
