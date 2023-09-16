@@ -137,7 +137,7 @@ products.forEach((product) => {
 
 // Adding Complete Img path (instead of writing the full path in each src)
 products.forEach((product) => {
-  product.img = "/img/products/" + product.img;
+  product.img = "../img/products/" + product.img;
 });
 
 /********* Categories Data ***********/
